@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+import { InicioComponent } from '../../pages/inicio/inicio.component';
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
 import { UserComponent } from '../../pages/user/user.component';
 import { TableComponent } from '../../pages/table/table.component';
@@ -8,9 +9,10 @@ import { IconsComponent } from '../../pages/icons/icons.component';
 import { MapsComponent } from '../../pages/maps/maps.component';
 import { NotificationsComponent } from '../../pages/notifications/notifications.component';
 import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
-import { InicioComponent }           from '../../pages/inicio/inicio.component';
+
 
 export const AdminLayoutRoutes: Routes = [
+    { path: 'inicio',        component: InicioComponent },
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user',           component: UserComponent },
     { path: 'table',          component: TableComponent },
@@ -19,5 +21,4 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'inicio',        component: InicioComponent },
 ];
