@@ -250,7 +250,7 @@
     &[data-color="red"]{
         @include sidebar-color($biciespol-red);
         @include sidebar-text-color($white-color);
-      }
+    }
 
     &[data-color="black"]{
       @include sidebar-color($dark-color);

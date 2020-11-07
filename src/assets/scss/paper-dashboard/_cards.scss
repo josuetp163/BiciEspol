@@ -20,6 +20,12 @@
             padding-left: 0;
             padding-right: 0;
         }
+
+        
+    }
+
+    &[data-color="white"]{
+        color: $white-color
     }
 
     .card-header{
@@ -65,7 +71,7 @@
     }
 
     &[data-background-color="blue"]{
-        background-color: $info-color;
+        background-color: $white-color;
     }
 
     &[data-background-color="green"]{
@@ -73,9 +79,8 @@
     }
 
     .image{
-        overflow: hidden;
-        height: 200px;
-        position: relative;
+        height: 30px    ;
+        position: absolute;
     }
 
     .avatar{

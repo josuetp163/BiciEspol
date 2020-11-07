@@ -13,7 +13,7 @@ import { IconsComponent }           from '../../pages/icons/icons.component';
 import { MapsComponent }            from '../../pages/maps/maps.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
-import { LoginComponent }           from '../../pages/login/login.component';
+import { InicioComponent }           from '../../pages/inicio/inicio.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -33,7 +33,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
-    LoginComponent,
+    InicioComponent,
   ]
 })
 
