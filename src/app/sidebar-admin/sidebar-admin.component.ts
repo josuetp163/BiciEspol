@@ -9,11 +9,6 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/admin-layout/inicio',        title: 'Inicio',                     icon:'nc-spaceship',  class: '' },
-    { path: '/admin-layout/disponibles',   title: 'Bicicletas Disponibles',     icon:'nc-spaceship',  class: '' },
-    { path: '/admin-layout/prestamo',      title: 'Prestamo de Bicicletas',     icon:'nc-spaceship',  class: '' },
-    { path: '/admin-layout/reporte',       title: 'Reporte de Bicicletas',      icon:'nc-spaceship',  class: '' },
-    { path: '/admin-layout/foro',          title: 'Foro de Informacion',        icon:'nc-spaceship',  class: '' },
     { path: '/admin-layout/dashboard',     title: 'Dashboard',                  icon:'nc-bank',       class: '' },
     { path: '/admin-layout/icons',         title: 'Icons',                      icon:'nc-diamond',    class: '' },
     { path: '/admin-layout/maps',          title: 'Maps',                       icon:'nc-pin-3',      class: '' },
