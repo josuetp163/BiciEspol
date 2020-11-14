@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Stream } from 'stream';
 
 import { ReporteComponent } from './reporte.component';
 
@@ -23,3 +24,4 @@ describe('ReporteComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
