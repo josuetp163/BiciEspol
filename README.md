@@ -1,8 +1,17 @@
 # BiciEspol
 Proyecto DAWM - BiciEspol - PAOII 2020
 
+Avance 1:
+ * Se se configuro y edito el template para nuestro proyecto
+ * Se crearon los distintos componentes de angular para las paginas necesarios.
+ * Se crearon dos layouts, para el cliente y el admin.
+ * Se diseño la pagina de inicio con cada una de las opciones.
+ * Con lo avanzado se hizo un deploy a la direccion de github pages que esta abajo.
 # https://josuetp163.github.io/BiciEspol/
-
+ * Para visualizar lo layouts tenemos las siguientes url:
+     * https://josuetp163.github.io/BiciEspol/client-layout/
+     * https://josuetp163.github.io/BiciEspol/admin-layout/
+  
 ## Grupo: Team.js
 ## Integrantes:
   * Josué Tomalá 
