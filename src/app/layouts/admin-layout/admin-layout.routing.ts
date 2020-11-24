@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
 
-import { DashboardComponent }          from '../../pages/dashboard/dashboard.component';
-import { UserComponent }               from '../../pages/user/user.component';
-import { TableComponent }              from '../../pages/table/table.component';
-import { TypographyComponent }         from '../../pages/typography/typography.component';
+import { InicioAdminComponent }        from '../../pages-admin/inicio-admin/inicio-admin.component';
+import { AqBicicletasComponent }          from '../../pages-admin/aq-bicicletas/aq-bicicletas.component';
+import { AdmBicicletasComponent }               from '../../pages-admin/adm-bicicletas/adm-bicicletas.component';
+import { ServicioComponent }              from '../../pages-admin/servicio/servicio.component';
+import { AdmForoComponent }         from '../../pages-admin/adm-foro/adm-foro.component';
 import { IconsComponent }              from '../../pages/icons/icons.component';
 import { MapsComponent }               from '../../pages/maps/maps.component';
 import { NotificationsComponent }      from '../../pages/notifications/notifications.component';
@@ -11,10 +12,11 @@ import { UpgradeComponent }            from '../../pages/upgrade/upgrade.compone
 
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user',           component: UserComponent },
-    { path: 'table',          component: TableComponent },
-    { path: 'typography',     component: TypographyComponent },
+    { path: 'inicio-admin',   component: InicioAdminComponent},         
+    { path: 'aq-bicicletas',      component: AqBicicletasComponent },
+    { path: 'adm-bicicletas',           component: AdmBicicletasComponent },
+    { path: 'servicio',          component: ServicioComponent },
+    { path: 'adm-foro',     component: AdmForoComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },

@@ -2,11 +2,12 @@ import { Routes } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
 export const AppRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'client-layout/inicio',
+    redirectTo: 'admin-layout/inicio',
     pathMatch: 'full',
   }, {
     path: 'admin-layout',
@@ -23,6 +24,14 @@ export const AppRoutes: Routes = [
         {
       path: '',
       loadChildren: './layouts/client-layout/client-layout.module#ClientLayoutModule'
+  }]},
+  {
+    path: 'login-layout',
+    component: LoginLayoutComponent,
+    children: [
+        {
+      path: '',
+      loadChildren: './layouts/login-layout/login-layout.module#LoginLayoutModule'
   }]},
   {
     path: '**',
