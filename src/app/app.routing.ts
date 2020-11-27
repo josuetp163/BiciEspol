@@ -7,7 +7,7 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
 export const AppRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'admin-layout/inicio',
+    redirectTo: '/login-layout',
     pathMatch: 'full',
   }, {
     path: 'admin-layout',

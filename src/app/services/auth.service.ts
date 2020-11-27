@@ -7,14 +7,14 @@ import { AngularFireAuth } from '@angular/fire/auth'
 export class AuthService {
   email: string;
   pass: string;
-
-  constructor(private AngularFireAuth: AngularFireAuth) { }
-  
+  state: boolean;
+  constructor(private AngularFireAuth: AngularFireAuth) {
+  }
   loginEmailUser(){
-    this.AngularFireAuth.signInWithEmailAndPassword(this.email,this.pass)
-    .catch(()=>{
-      console.log("error")
-    })
-    console.log("sign in")
+    return new Promise((resolve,reject)=>{
+      this.AngularFireAuth.signInWithEmailAndPassword(this.email,this.pass)
+      .then(user => resolve(user),
+      err => reject(err))
+    });
   }
 }
