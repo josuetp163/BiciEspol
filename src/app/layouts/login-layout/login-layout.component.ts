@@ -10,9 +10,11 @@ import { ToastrService } from "ngx-toastr";
   styleUrls: ['./login-layout.component.css']
 })
 export class LoginLayoutComponent implements OnInit {
+  focusA:boolean;
+  focusB:boolean;
 
   constructor(
-    private AuthService: AuthService,
+    public AuthService: AuthService,
     private Router: Router,
     private ToastrService: ToastrService,
     ) { }

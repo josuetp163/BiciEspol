@@ -15,7 +15,7 @@ export class AqBicicletasComponent implements OnInit{
   bicicletas: any[];
 
   constructor(
-    private FirebaseService: FirebaseService,
+    public FirebaseService: FirebaseService,
     private toastr: ToastrService
     ){}
 
