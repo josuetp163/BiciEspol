@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-adm-foro',
   templateUrl: './adm-foro.component.html',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmForoComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    ) { }
+  ngOnInit(): void{
   }
-
 }

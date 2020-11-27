@@ -1,7 +1,14 @@
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import {AngularFireModule } from '@angular/fire';
+
+import {environment} from '../environments/environment';
+
 import { ToastrModule } from "ngx-toastr";
+
 
 import { SidebarModule } from './sidebar/sidebar.module';
 import { SidebarAdminModule } from './sidebar-admin/sidebar-admin.module';
@@ -29,12 +36,14 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
+    AngularFireModule.initializeApp(environment.firebase),
     SidebarModule,
     SidebarAdminModule,
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
