@@ -66,6 +66,10 @@
         background-color: $biciespol-red;
     }
 
+    &[data-background-color="prussian_blue"]{
+        background-color:#1D3557;
+    }
+
     &[data-background-color="yellow"]{
         background-color: $warning-color;
     }

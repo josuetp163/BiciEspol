@@ -1,0 +1,11 @@
+.camera{
+    display: flex;
+}
+    #video{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    
+    #canvas{
+        display: none;
+    }

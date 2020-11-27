@@ -1,0 +1,48 @@
+<div class="row wrapper" id="login-card">
+    <div class="col-1 col-md-3 col-xl-4"></div>
+    <div class="col-10 mt-auto mb-auto col-md-6 col-xl-4" id="login">
+        <div class="card text-center">
+            <img class="card-img-top" src="assets/img/cyclist.jpg" alt="Card image cap" />
+            <div class="card-body">
+                <form #LogInForm="ngForm" (ngSubmit)="LogIn(LogInForm)">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="input-group col-10" [ngClass]="{'input-group-focus':focusA===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-at"></i></span>
+                            </div>
+                            <input 
+                            type="email" 
+                            class="form-control" 
+                            placeholder="Correo Electronico"
+                            #emaile="ngModel"
+                            [(ngModel)]="AuthService.email"
+                            [ngModelOptions]="{standalone: true}"
+                            (focus)="focusA=true" 
+                            (blur)="focusA=false">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="input-group col-10" [ngClass]="{'input-group-focus':focusB===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            </div>
+                            <input 
+                            type="password" 
+                            class="form-control" 
+                            placeholder="Contraseña" 
+                            #pass="ngModel"
+                            [(ngModel)]="AuthService.pass"
+                            [ngModelOptions]="{standalone: true}"
+                            (focus)="focusB=true"
+                            (blur)="focusB=false">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
