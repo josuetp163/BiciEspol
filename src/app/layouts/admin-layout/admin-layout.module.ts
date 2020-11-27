@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
-import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
-import { UserComponent }            from '../../pages/user/user.component';
-import { TableComponent }           from '../../pages/table/table.component';
-import { TypographyComponent }      from '../../pages/typography/typography.component';
+
+import { InicioAdminComponent }        from '../../pages-admin/inicio-admin/inicio-admin.component';
+import { AqBicicletasComponent }          from '../../pages-admin/aq-bicicletas/aq-bicicletas.component';
+import { AdmBicicletasComponent }               from '../../pages-admin/adm-bicicletas/adm-bicicletas.component';
+import { ServicioComponent }              from '../../pages-admin/servicio/servicio.component';
+import { AdmForoComponent }         from '../../pages-admin/adm-foro/adm-foro.component';
 import { IconsComponent }           from '../../pages/icons/icons.component';
 import { MapsComponent }            from '../../pages/maps/maps.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
@@ -25,11 +27,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   declarations: [
-    DashboardComponent,
-    UserComponent,
-    TableComponent,
+    InicioAdminComponent,
+    AqBicicletasComponent,
+    AdmBicicletasComponent,
+    ServicioComponent,
+    AdmForoComponent,
     UpgradeComponent,
-    TypographyComponent,
     IconsComponent,
     MapsComponent,
     NotificationsComponent,

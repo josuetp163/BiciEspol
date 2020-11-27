@@ -8,7 +8,7 @@ import { ForoComponent }            from '../../pages/foro/foro.component';
 
 
 export const ClientLayoutRoutes: Routes = [
-    { path: 'inicio',         component: InicioComponent },
+    { path: 'inicio',   component: InicioComponent },
     { path: 'disponibles',    component: DisponiblesComponent },
     { path: 'prestamo',       component: PrestamoComponent },
     { path: 'reporte',        component: ReporteComponent },

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgControlStatusGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-reporte',
