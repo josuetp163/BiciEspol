@@ -2,12 +2,10 @@
     display: flex;
 }
     #video{
-        margin-right: 20%;
-        margin-left: 16%;
+        margin-right: 5%;
+        margin-left: 5%;
     }
-    #photo{
-        display: none;
-    }
+    
     #canvas{
         display: none;
     }

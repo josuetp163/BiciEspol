@@ -12,7 +12,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/client-layout/inicio',        title: 'Inicio',                     icon:'nc-spaceship',  class: '' },
     { path: '/client-layout/disponibles',   title: 'Bicicletas Disponibles',     icon:'nc-spaceship',  class: '' },
     { path: '/client-layout/prestamo',      title: 'Prestamo de Bicicletas',     icon:'nc-spaceship',  class: '' },
-    { path: '/client-layout/reporte',       title: 'Reporte de Bicicletas',      icon:'nc-spaceship',  class: '' },
+    { path: '/client-layout/reporte',       title: 'Reporte de Bicicletas',      icon:'nc-spaceship',  class: 'reporte' },
     { path: '/client-layout/foro',          title: 'Foro de Informacion',        icon:'nc-spaceship',  class: '' },
 ];
 
