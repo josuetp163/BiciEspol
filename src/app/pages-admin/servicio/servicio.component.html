@@ -1,1 +1,21 @@
-<p>servicio works!</p>
+<form>
+    <div class="input-group no-border">
+      <input type="text" value="" class="form-control" placeholder="Buscar...">
+      <div class="input-group-append">
+        <div class="input-group-text">      
+          <i class="nc-icon nc-zoom-split"></i>
+        </div>
+      </div>
+    </div>
+</form>
+<div class="row">
+    <div class="col-6 col-md-3 col-lg-2" *ngFor="let bici of bicicletas">
+        <div class="card card-stats">
+            <div class="card-body">
+                <h5 class="card-title">{{bici.codigo}}</h5>
+                <p>{{bici.estacion}}</p>
+                <p>{{bici.estado}}</p>
+            </div>
+        </div>
+    </div>
+</div>
