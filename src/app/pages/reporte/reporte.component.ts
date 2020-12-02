@@ -15,6 +15,8 @@ export class ReporteComponent implements OnInit {
 }
 let reporte;
 let ancla;
+
+
 //Videocamara
 function comprobar() {
   reporte= document.getElementsByClassName("reporte").item(0);
@@ -36,6 +38,7 @@ var video = null;
 var canvas = null;
 var photo = null;
 var startbutton = null;
+var cancel_button= null;
 
 function startup() {
   console.log("clic")
@@ -43,6 +46,9 @@ function startup() {
   canvas = document.getElementById('canvas');
   photo = document.getElementById('photo');
   startbutton = document.getElementById('startbutton');
+  cancel_button=document.getElementById('cancel_button')
+
+  photo.setAttribute("class","hidden")
 
   navigator.mediaDevices.getUserMedia({video: true, audio: false})
   .then(function(stream) {
@@ -71,16 +77,26 @@ function startup() {
       photo.setAttribute('width', width);
       photo.setAttribute('height', height);
       streaming = true;
+      let cont_botones= document.getElementById("contenedor_botones");
+      cont_botones.setAttribute("class","hidden")
     }
   }, false);
 
   startbutton.addEventListener('click', function(ev){
     takepicture();
     ev.preventDefault();
+    non_visible();
+
   }, false);
   
   clearphoto();
+
+  cancel_button.addEventListener('click', function(ev){
+    visible();
+  })
+  
 }
+
 
 // Fill the photo with an indication that none has been
 // captured.
@@ -122,9 +138,35 @@ function stop(){
   }
 }
 
+//document.querySelector()
 
+function non_visible(){
+  let cont_video=document.getElementById("video")
+  cont_video.setAttribute("class","hidden");
 
+  let cont_photo=document.getElementById("photo")
+  cont_photo.setAttribute("class","visible");
 
+  let cont_botones= document.getElementById("contenedor_botones");
+  cont_botones.setAttribute("class","contenedor_botones")
+
+  let boton_tomar= document.getElementById("pick_button");
+  boton_tomar.setAttribute("class","hidden")
+}
+
+function visible(){
+  let cont_video=document.getElementById("video")
+  cont_video.setAttribute("class","visible");
+  
+  let cont_photo=document.getElementById("photo")
+  cont_photo.setAttribute("class","hidden");
+
+  let cont_botones= document.getElementById("contenedor_botones");
+  cont_botones.setAttribute("class","hidden")
+
+  let boton_tomar= document.getElementById("pick_button");
+  boton_tomar.setAttribute("class","visibles")
+}
 
 
 

@@ -1,8 +1,6 @@
 
 <h2 class="text-muted">Reportar una bicicleta</h2>
-<div class="pick_button">
-    <button class="btn btn-primary" id="startbutton">Tomar foto</button>
-</div>
+
 
 <div class="camera">
     <video id="video">Video stream not available.</video>
@@ -12,18 +10,26 @@
   <canvas id="canvas">
   </canvas>
   
+  <div id="pick_button" class="pick_button">
+    <button class="btn btn-primary" id="startbutton">Tomar foto</button>
+</div>
 
-<div class="contenedor_botones">
+<div id="problema">
+    <h2>Problema</h2>
+    <div id="descripcion">
+        <input type="text" name="text_descripcion" id="text_descripcion">
+    </div>
+</div>
+
+<div id="contenedor_botones" class="contenedor_botones">
     <div class="row">
-        <div class="col-3 cancel_button">
+        <div id='cancel_button' class="col-3 ">
             <button class="btn btn-danger">Cancelar</button>
         </div>
         <div class="col-4"></div>
         <div class="col-3 next_button">
-            <button class="btn btn-success">Siguiente</button>
+            <button class="btn btn-success">Reportar</button>
         </div>
-    </div>
-    
-    
+    </div> 
 </div>
 
