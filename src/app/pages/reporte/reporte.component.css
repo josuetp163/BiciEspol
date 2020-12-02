@@ -1,11 +1,31 @@
-.camera{
-    display: flex;
+
+
+#pick_button{
+    text-align: center;
 }
-    #video{
-        margin-right: 5%;
-        margin-left: 5%;
-    }
+
+.camera{
+    
+    text-align: center;
+}
+    
     
     #canvas{
         display: none;
     }
+
+.hidden{
+    display: none;
+}
+.visible{
+    display: inline-block;
+}
+
+.problema{
+    margin: 10%;
+}
+
+.contenedor_botones{
+    text-align: end;
+    margin-left: 7%;
+}
