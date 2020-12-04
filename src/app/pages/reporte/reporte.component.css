@@ -1,4 +1,9 @@
 
+#container-codigo{
+    width: 15rem;
+    
+}
+
 
 #pick_button{
     text-align: center;
@@ -7,6 +12,7 @@
 .camera{
     
     text-align: center;
+    margin-bottom: 30px;
 }
     
     
@@ -21,11 +27,17 @@
     display: inline-block;
 }
 
-.problema{
-    margin: 10%;
-}
 
 .contenedor_botones{
     text-align: end;
     margin-left: 7%;
+}
+
+#text_description{
+    width: 75%;
+    height: 130px;
+}
+#problema{
+    text-align: center;
+    margin-bottom: 20px;
 }
