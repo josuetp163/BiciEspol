@@ -45,23 +45,20 @@
         <h5 class="card-title">Informacion de Bicicleta</h5>
       </div>
       <div class="card-body">
-        <form #bicicletaForm="ngForm" (ngSubmit)="onSubmit(bicicletaForm)">
+        <form>
           <div class="form-group">
             <label for="codigo">Codigo</label>
-            <input type="text" class="form-control" name="codigo" #codigo="ngModel"
-              [(ngModel)]="FirebaseService.selectedBicicleta.codigo" placeholder="Codigo">
+            <input type="text" class="form-control" name="codigo">
           </div>
 
           <div class="form-group">
             <label for="codigo">Estado</label>
-            <input type="text" class="form-control" name="estado" #estado="ngModel"
-              [(ngModel)]="FirebaseService.selectedBicicleta.estado" placeholder="Estado">
+            <input type="text" class="form-control" name="estado">
           </div>
 
           <div class="form-group">
             <label for="codigo">Estacion</label>
-            <input type="text" class="form-control" name="estacion" #estacion="ngModel"
-              [(ngModel)]="FirebaseService.selectedBicicleta.estacion" placeholder="Estacion">
+            <input type="text" class="form-control" name="estacion">
           </div>
 
           <div class="form-group">
