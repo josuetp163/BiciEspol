@@ -1,21 +1,78 @@
-<form>
-    <div class="input-group no-border">
-      <input type="text" value="" class="form-control" placeholder="Buscar...">
-      <div class="input-group-append">
-        <div class="input-group-text">      
-          <i class="nc-icon nc-zoom-split"></i>
+<div class="row">
+  <div class="col-8 col-xl-4">
+    <form>
+      <div class="input-group no-border">
+        <input type="text" value="" class="form-control" placeholder="Buscar...">
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <i class="nc-icon nc-zoom-split"></i>
+          </div>
         </div>
       </div>
+    </form>
+  </div>
+  <div ngbDropdown>
+    <a class="btn btn-primary btn-link btn-round mt-1" ngbDropdownToggle>
+      <i class="fa fa-filter"></i>
+    </a>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+      <button ngbDropdownItem>Disponibles</button>
+      <button ngbDropdownItem>No disponibles</button>
+      <button ngbDropdownItem>Defectuosa</button>
+      <div class="dropdown-divider"></div>
     </div>
-  </form>
+  </div>
+</div>
 <div class="row">
-    <div class="col-6 col-md-3 col-lg-2" *ngFor="let bici of bicicletas">
+  <div class="row col-12 col-md-7 col-xl-7" id="bicicletas">
+    <div class="col-sm-12 col-md-6 col-xl-4" *ngFor="let bici of bicicletas">
+      <a href="">
         <div class="card card-stats">
-            <div class="card-body">
-                <h5 class="card-title">{{bici.codigo}}</h5>
-                <p>{{bici.estacion}}</p>
-                <p>{{bici.estado}}</p>
-            </div>
+          <div class="card-body">
+            <button class="btn btn-outline-primary btn-fab btn-icon btn-round mt-0 float-right"><i
+                class="fa fa-trash"></i></button>
+            <h5 class="card-title">{{bici.codigo}}</h5>
+            <p>{{bici.estacion}}</p>
+            <p>{{bici.estado}}</p>
+          </div>
         </div>
+      </a>
     </div>
+  </div>
+  <div class="col-sm-12 col-md-5 col-xl-5">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Informacion de Bicicleta</h5>
+      </div>
+      <div class="card-body">
+        <form #bicicletaForm="ngForm" (ngSubmit)="onSubmit(bicicletaForm)">
+          <div class="form-group">
+            <label for="codigo">Codigo</label>
+            <input type="text" class="form-control" name="codigo" #codigo="ngModel"
+              [(ngModel)]="FirebaseService.selectedBicicleta.codigo" placeholder="Codigo">
+          </div>
+
+          <div class="form-group">
+            <label for="codigo">Estado</label>
+            <input type="text" class="form-control" name="estado" #estado="ngModel"
+              [(ngModel)]="FirebaseService.selectedBicicleta.estado" placeholder="Estado">
+          </div>
+
+          <div class="form-group">
+            <label for="codigo">Estacion</label>
+            <input type="text" class="form-control" name="estacion" #estacion="ngModel"
+              [(ngModel)]="FirebaseService.selectedBicicleta.estacion" placeholder="Estacion">
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">
+              Editar información
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
 </div>

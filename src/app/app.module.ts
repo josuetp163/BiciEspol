@@ -14,6 +14,7 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { SidebarAdminModule } from './sidebar-admin/sidebar-admin.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
+import { NavbarAdminModule} from './shared/navbar-admin/navbar-admin.module';
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 
 import { AppComponent } from './app.component';
@@ -40,6 +41,7 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
     SidebarModule,
     SidebarAdminModule,
     NavbarModule,
+    NavbarAdminModule,
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
