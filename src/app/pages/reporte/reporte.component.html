@@ -1,7 +1,21 @@
 
-<h2 class="text-muted">Reportar una bicicleta</h2>
 
+<h2>Codigo QR</h2>
+    <div class="card" id="container-codigo" data-background-color="green_code" data-color="white">
+        <div class="card-body" >
+            <div class="row">
+                <div class="col-8 col-md-9 col-xl-8">
+                    <p>BICICLETA #35</p>
+                </div>
+                <div class="col-3 col-md-3 col-xl-3">
+                    <img src="assets/img/check.png" class="nc-icon" alt="...">
+                </div>
+            </div>
+        </div>
+  </div>
+  
 
+<h2>Foto del problema </h2>
 <div class="camera">
     <video id="video">Video stream not available.</video>
     <img id="photo" alt="The screen capture will appear in this box."> 
@@ -14,14 +28,15 @@
     <button class="btn btn-primary" id="startbutton">Tomar foto</button>
 </div>
 
+<h2>Problema</h2>
 <div id="problema">
-    <h2>Problema</h2>
-    <div id="descripcion">
-        <input type="text" name="text_descripcion" id="text_descripcion">
+    <div id="descripcion">      
+    <textarea id="w3review" name="w3review" rows="4" cols="62"  placeholder="Breve descripcion del problema" >
+    </textarea>
     </div>
 </div>
 
-<div id="contenedor_botones" class="contenedor_botones">
+<div id="contenedor_botones" >
     <div class="row">
         <div id='cancel_button' class="col-3 ">
             <button class="btn btn-danger">Cancelar</button>
