@@ -30,7 +30,7 @@ function comprobar() {
 }
 
 
-var width = 320;    
+var width = 425;    
 var height = 0;     
 
 var streaming = false;

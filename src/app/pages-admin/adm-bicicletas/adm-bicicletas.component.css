@@ -1,0 +1,10 @@
+a{
+    text-decoration: none;
+}
+#bicicletas .card{
+    transition: 150ms;
+}
+#bicicletas .card:hover {
+    text-decoration: none;
+    background-color: #F5F5F5;
+}

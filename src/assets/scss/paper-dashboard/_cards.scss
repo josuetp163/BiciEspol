@@ -70,6 +70,10 @@
         background-color:#1D3557;
     }
 
+    &[data-background-color="green_code"]{
+        background-color:#74a432;
+    }
+
     &[data-background-color="yellow"]{
         background-color: $warning-color;
     }
