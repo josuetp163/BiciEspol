@@ -11,10 +11,6 @@ import { AqBicicletasComponent }          from '../../pages-admin/aq-bicicletas/
 import { AdmBicicletasComponent }               from '../../pages-admin/adm-bicicletas/adm-bicicletas.component';
 import { ServicioComponent }              from '../../pages-admin/servicio/servicio.component';
 import { AdmForoComponent }         from '../../pages-admin/adm-foro/adm-foro.component';
-import { IconsComponent }           from '../../pages/icons/icons.component';
-import { MapsComponent }            from '../../pages/maps/maps.component';
-import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
-import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -32,10 +28,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AdmBicicletasComponent,
     ServicioComponent,
     AdmForoComponent,
-    UpgradeComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
   ]
 })
 
