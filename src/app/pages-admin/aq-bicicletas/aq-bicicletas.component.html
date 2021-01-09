@@ -6,37 +6,23 @@
         </div>
         <div class="card-body"> 
             <form #bicicletaForm="ngForm" (ngSubmit)="onSubmit(bicicletaForm)">
+
+
                 <div class="form-group">
-                    <label for="codigo">Ingrese el codigo</label>
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        name="codigo"
-                        #codigo="ngModel"
-                        [(ngModel)]="FirebaseService.selectedBicicleta.codigo"
-                        placeholder="Codigo">
+                    <label for="estado">Ingrese el estado</label><br>
+                    <select class="form-select form-select-sm" name="estado" id="estacion" [(ngModel)]="bicicleta.estado">
+                        <option value="Disponible">Disponible</option>
+                        <option value="No disponible">No Disponible</option>
+                        <option value="Defectuosa">Defectuosa</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="codigo">Ingrese el estado</label>
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        name="estado"
-                        #estado="ngModel"
-                        [(ngModel)]="FirebaseService.selectedBicicleta.estado"
-                        placeholder="Estado">
-                </div>
-
-                <div class="form-group">
-                    <label for="codigo">Ingrese la estacion</label>
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        name="estacion"
-                        #estacion="ngModel" 
-                        [(ngModel)]="FirebaseService.selectedBicicleta.estacion"
-                        placeholder="Estacion">
+                    <label for="estacion">Ingrese la estacion</label><br>
+                    <select class="form-select form-select-sm" name="estacion" id="estacion" [(ngModel)]="bicicleta.estacion">
+                        <option value="1">Garita</option>
+                        <option value="2">Rectorado</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -49,6 +35,5 @@
         </div>
 
     </div>
-
 
 </div>

@@ -16,7 +16,7 @@ export class FirebaseService {
   getBicicletas(): AngularFireList<any>{
     return this.bicicletas = this.firebase.list('/Bicicletas');
   }
-
+  /*
   insertBicicleta(bicicleta: Bicicleta ){
     this.bicicletas.push({
       codigo: bicicleta.codigo,
@@ -35,7 +35,6 @@ export class FirebaseService {
 
   eliminarBicicleta(bicicleta: Bicicleta){
     this.bicicletas.remove(bicicleta.$key);
-  }
-
+  }*/
 
 }

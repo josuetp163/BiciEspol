@@ -24,7 +24,6 @@ export class ContactoComponent implements OnInit {
   }
 
   onSubmit(bicicletaForm: NgForm){
-    
     this.http.post("http://localhost:3000/mail",this.mail).subscribe(
       data => {
         let res: any = data;

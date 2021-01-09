@@ -4,19 +4,25 @@ import { FirebaseService} from '../../services/firebase.service';
 import { NgForm } from '@angular/forms';
 import { Bicicleta } from '../../models/bicicleta';
 import { ToastrService } from "ngx-toastr";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-aq-bicicletas',
   templateUrl: './aq-bicicletas.component.html',
   styleUrls: ['./aq-bicicletas.component.css']
 })
+@Injectable({
+  providedIn: 'root'
+})
 export class AqBicicletasComponent implements OnInit{
   
-  bicicletas: any[];
+  bicicleta = new Bicicleta();
 
   constructor(
     public FirebaseService: FirebaseService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private http: HttpClient
     ){}
 
   showNotification(){
@@ -34,7 +40,7 @@ export class AqBicicletasComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.FirebaseService.getBicicletas().snapshotChanges()
+    /*this.FirebaseService.getBicicletas().snapshotChanges()
     .subscribe(item =>{
       this.bicicletas = [];
       item.forEach(element =>{
@@ -42,18 +48,28 @@ export class AqBicicletasComponent implements OnInit{
         info["$key"] = element.key;
         this.bicicletas.push(info);
       })
-    });
+    });*/
   }
 
   onSubmit(bicicletaForm: NgForm){
+    this.http.post("http://localhost:3000/bicicletas/ingresarBicicleta",this.bicicleta).subscribe(
+      data => {
+        this.showNotification();
+      },
+      err => {
+        console.log(err)
+      }
+    )
+    /*
     this.FirebaseService.insertBicicleta(bicicletaForm.value);
     this.resetForm(bicicletaForm);
-    this.showNotification();
+    this.showNotification();*/
   }
+  /*
   resetForm(bicicletaForm: NgForm){
     if(bicicletaForm != null){
       bicicletaForm.reset();
       this.FirebaseService.selectedBicicleta = new Bicicleta();
     }
-  }
+  }*/
 }

@@ -26,12 +26,12 @@
 <div class="row">
   <div class="row col-12 col-md-7 col-xl-7" id="bicicletas">
     <div class="col-sm-12 col-md-6 col-xl-4" *ngFor="let bici of bicicletas">
-      <a href="javascript:void(0)">
+      <a (click)="seleccionarBicicleta(bici)">
         <div class="card card-stats">
           <div class="card-body">
-            <button class="btn btn-outline-primary btn-fab btn-icon btn-round mt-0 float-right"><i
-                class="fa fa-trash"></i></button>
-            <h5 class="card-title">{{bici.codigo}}</h5>
+            <a class="btn btn-outline-primary btn-fab btn-icon btn-round mt-0 float-right"
+              (click)="eliminarBicicleta(bici)"><i class="fa fa-trash"></i></a>
+            <h5 class="card-title">{{bici.idBicicleta}}</h5>
             <p>{{bici.estacion}}</p>
             <p>{{bici.estado}}</p>
           </div>
@@ -48,21 +48,28 @@
         <form>
           <div class="form-group">
             <label for="codigo">Codigo</label>
-            <input type="text" class="form-control" name="codigo">
+            <input readonly="true" type="text" class="form-control" name="codigo" [(ngModel)]="bicicleta.id">
           </div>
 
           <div class="form-group">
-            <label for="codigo">Estado</label>
-            <input type="text" class="form-control" name="estado">
+            <label for="estado">Estado</label><br>
+            <select class="form-select form-select-sm" name="estado" id="estacion" [(ngModel)]="bicicleta.estado">
+              <option value="Disponible">Disponible</option>
+              <option value="No disponible">No Disponible</option>
+              <option value="Defectuosa">Defectuosa</option>
+            </select>
           </div>
 
           <div class="form-group">
-            <label for="codigo">Estacion</label>
-            <input type="text" class="form-control" name="estacion">
+            <label for="estacion">Ingrese la estacion</label><br>
+            <select class="form-select form-select-sm" name="estacion" id="estacion" [(ngModel)]="bicicleta.estacion">
+              <option value="1">Garita</option>
+              <option value="2">Rectorado</option>
+            </select>
           </div>
 
           <div class="form-group">
-            <button class="btn btn-primary" type="submit">
+            <button (click)="actualizarBicicleta()" class="btn btn-primary" type="submit">
               Editar información
             </button>
           </div>

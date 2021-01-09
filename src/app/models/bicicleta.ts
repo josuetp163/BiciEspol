@@ -1,6 +1,5 @@
 export class Bicicleta {
-    $key: string;
-    codigo: string;
+    id: number
     estacion: string;
     estado: string;
 }
