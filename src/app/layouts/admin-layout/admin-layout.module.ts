@@ -18,6 +18,7 @@ import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component'
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AdmEstadisticaComponent } from 'app/pages-admin/adm-estadistica/adm-estadistica.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
+    AdmEstadisticaComponent,
   ]
 })
 

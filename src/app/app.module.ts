@@ -22,6 +22,7 @@ import { AppRoutes } from './app.routing';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { AdmEstadisticaComponent } from './pages-admin/adm-estadistica/adm-estadistica.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
     AdminLayoutComponent,
     ClientLayoutComponent,
     LoginLayoutComponent,
+    AdmEstadisticaComponent,
   ],
   imports: [
     BrowserAnimationsModule,
