@@ -9,11 +9,12 @@ import {environment} from '../environments/environment';
 import { ToastrModule } from "ngx-toastr";
 
 
-
+import { HttpClientModule } from '@angular/common/http';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { SidebarAdminModule } from './sidebar-admin/sidebar-admin.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
+import { NavbarAdminModule} from './shared/navbar-admin/navbar-admin.module';
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 
 import { AppComponent } from './app.component';
@@ -23,7 +24,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { AdmEstadisticaComponent } from './pages-admin/adm-estadistica/adm-estadistica.component';
-
 
 @NgModule({
   declarations: [
@@ -35,6 +35,7 @@ import { AdmEstadisticaComponent } from './pages-admin/adm-estadistica/adm-estad
   ],
   imports: [
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
@@ -42,6 +43,7 @@ import { AdmEstadisticaComponent } from './pages-admin/adm-estadistica/adm-estad
     SidebarModule,
     SidebarAdminModule,
     NavbarModule,
+    NavbarAdminModule,
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,

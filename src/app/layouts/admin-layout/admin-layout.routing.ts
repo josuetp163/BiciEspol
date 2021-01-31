@@ -12,6 +12,7 @@ import { UpgradeComponent }            from '../../pages/upgrade/upgrade.compone
 import { AdmEstadisticaComponent}      from "../../pages-admin/adm-estadistica/adm-estadistica.component";
 
 
+
 export const AdminLayoutRoutes: Routes = [
     { path: 'inicio-admin',   component: InicioAdminComponent},         
     { path: 'aq-bicicletas',  component: AqBicicletasComponent },

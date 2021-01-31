@@ -1,21 +1,42 @@
-<form>
+<div class="row">
+  <form class="col-12 col-md-4 col-xl-4">
     <div class="input-group no-border">
       <input type="text" value="" class="form-control" placeholder="Buscar...">
       <div class="input-group-append">
-        <div class="input-group-text">      
+        <div class="input-group-text">
           <i class="nc-icon nc-zoom-split"></i>
         </div>
       </div>
     </div>
-</form>
-<div class="row">
-    <div class="col-6 col-md-3 col-lg-2" *ngFor="let bici of bicicletas">
-        <div class="card card-stats">
-            <div class="card-body">
-                <h5 class="card-title">{{bici.codigo}}</h5>
-                <p>{{bici.estacion}}</p>
-                <p>{{bici.estado}}</p>
-            </div>
-        </div>
-    </div>
+  </form>
 </div>
+<div class="row">
+  <div class="row col-12 col-md-7 col-xl-7" id="bicicletas">
+    <div class="col-6 col-md-6 col-xl-4" *ngFor="let bici of bicicletas">
+      <a href="javascript:void(0)">
+        <div class="card card-stats"> 
+          <div class="card-body">
+            <h5 class="card-title">{{bici.idBicicleta}}</h5>
+            <p>{{bici.estacion}}</p>
+            <p>{{bici.estado}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-5 col-xl-5">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Bicicleta</h3>
+        <input class="form-control" readonly="true" placeholder="b-01">
+        <h3 class="card-title">Foto del problema </h3>
+        <img id="photo" src="assets/img/Rectorado.jpg" alt="The screen capture will appear in this box.">
+        <h3 class="card-title">Problema</h3>
+        <textarea id="w3review" name="w3review" rows="4" cols="62" placeholder="Breve descripcion del problema"
+          class="form-control" readonly="true"></textarea>
+      </div>
+      <div class="card-footer text-center" id="contenedor_botones">
+        <button class="btn btn-outline-primary">Arreglada</button>
+      </div>
+    </div>
+  </div>

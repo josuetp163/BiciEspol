@@ -10,6 +10,7 @@ import { DisponiblesComponent }     from '../../pages/disponibles/disponibles.co
 import { PrestamoComponent }        from '../../pages/prestamo/prestamo.component';
 import { ReporteComponent }         from '../../pages/reporte/reporte.component';
 import { ForoComponent }            from '../../pages/foro/foro.component';
+import { ContactoComponent }            from '../../pages/contacto/contacto.component';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -27,6 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PrestamoComponent,
     ReporteComponent,
     ForoComponent,
+    ContactoComponent,
   ]
 })
 
