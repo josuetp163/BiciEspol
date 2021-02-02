@@ -1,13 +1,43 @@
-<!-- This will serve as a container for our chart. This does not have to be a div, and can in fact, just be the body if you want. -->
-<div id="my-chart"></div>
+<h2>
+    GRAFICOS ESTADÍSTICOS</h2>
+<hr>
 
-<h2>Pie Chart</h2>
+<div class="row">
+    <div class="col-12 col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Estado de las bicicletas</h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text pl-5">
+                    Disponibles y Rotas <br>
+                </p>
+                <figure id="pie"></figure>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Bicicletas disponibles</h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text pl-5">
+                    Garita y Rectorado <br>
+                </p>
+                <figure id="bar"></figure>
+            </div>
 
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Bicicletas</h5>
-        <p class="card-text">Bicicletas disponibles y rotas</p>
+        </div>
     </div>
-    <figure id="pie"></figure>
 
+    <div class="col-12 col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Bicicletas alquiladas</h3>
+            </div>
+            <div class="card-body">
+                <p>Numero de veces que han sido alquiladas</p>
+                <figure id="barHor"></figure>
+            </div>
+        </div>
+    </div>
 </div>

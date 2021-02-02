@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
-
 import { InicioAdminComponent }        from '../../pages-admin/inicio-admin/inicio-admin.component';
 import { AqBicicletasComponent }          from '../../pages-admin/aq-bicicletas/aq-bicicletas.component';
 import { AdmBicicletasComponent }               from '../../pages-admin/adm-bicicletas/adm-bicicletas.component';
@@ -30,10 +29,7 @@ import { AdmEstadisticaComponent } from 'app/pages-admin/adm-estadistica/adm-est
     ServicioComponent,
     AdmForoComponent,
     AdmEstadisticaComponent,
-    UpgradeComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
+    
 
   ]
 })
