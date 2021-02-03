@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { DataTablesModule } from "angular-datatables";
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -11,6 +12,7 @@ import { AqBicicletasComponent }          from '../../pages-admin/aq-bicicletas/
 import { AdmBicicletasComponent }               from '../../pages-admin/adm-bicicletas/adm-bicicletas.component';
 import { ServicioComponent }              from '../../pages-admin/servicio/servicio.component';
 import { AdmForoComponent }         from '../../pages-admin/adm-foro/adm-foro.component';
+import { ReportesComponent } from '../../pages-admin/reportes/reportes.component';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    NgbModule
+    NgbModule,
+    DataTablesModule
   ],
   declarations: [
     InicioAdminComponent,
@@ -28,6 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AdmBicicletasComponent,
     ServicioComponent,
     AdmForoComponent,
+    ReportesComponent,
   ]
 })
 

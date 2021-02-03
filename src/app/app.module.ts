@@ -29,7 +29,7 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
     AppComponent,
     AdminLayoutComponent,
     ClientLayoutComponent,
-    LoginLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
     BrowserAnimationsModule,

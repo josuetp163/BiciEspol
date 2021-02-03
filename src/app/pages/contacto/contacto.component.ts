@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { Puente } from '../../models/puente';
 
 @Component({
   selector: 'app-contacto',
@@ -24,7 +25,7 @@ export class ContactoComponent implements OnInit {
   }
 
   onSubmit(bicicletaForm: NgForm){
-    this.http.post("http://localhost:3000/mail",this.mail).subscribe(
+    this.http.post( Puente.url + "/mail",this.mail).subscribe(
       data => {
         let res: any = data;
         console.log("Enviado con exito")

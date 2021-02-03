@@ -1,0 +1,43 @@
+<div class="input-group ml-5">
+    <div class="card col-10">
+        <div class="card-header">
+            <h5 class="card-title">Reportes de prestamos de bicicletas</h5>
+        </div>
+        <div class="card-body">
+            <div class="row ml-3">
+                <h6 class = "mt-2">Seleccionar Bicicleta:</h6>
+                <select class="custom-select col-3" name="filtro" id="filtro">
+                    <option value="holder">Codigo de Bicicleta</option>
+                    <option *ngFor="let bicicleta of bicicletas" value="{{bicicleta.idBicicleta}}">{{bicicleta.idBicicleta}}</option>
+                </select>
+            </div>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" style="display:none;"
+                class="table align-items-center table-flush row-border hover" id="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Codigo Bicicleta</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Duracioon</th>
+                    </tr>
+                </thead>    
+                <tbody>
+                    <tr *ngFor="let prestamo of prestamos">
+                        <td>
+                            {{prestamo.codigoBici}}
+                        </td>
+                        <td>
+                            {{prestamo.usuario}}
+                        </td>
+                        <td>
+                            {{prestamo.fecha}}
+                        </td>
+                        <td>
+                            {{prestamo.duracion}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

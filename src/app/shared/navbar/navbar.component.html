@@ -28,7 +28,7 @@
           </a>
           <div ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
             <a ngbDropdownItem href="/BiciEspol/#/admin-layout/inicio-admin">Vista Admin</a>
-            <a ngbDropdownItem href="/BiciEspol/#/login-layout/">Cerrar Sesion</a>
+            <a ngbDropdownItem href="/BiciEspol/#/login-layout/" (click)="logout()">Cerrar Sesion</a>
           </div>
         </li>
       </ul>

@@ -14,6 +14,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/admin-layout/adm-bicicletas', title: 'Administrar Bicicletas', icon: 'nc-briefcase-24', class: '' },
     { path: '/admin-layout/servicio', title: 'Fuera de servicio', icon: 'nc-settings', class: '' },
     { path: '/admin-layout/adm-foro', title: 'Administrar Foro de Informacion', icon: 'nc-paper', class: '' },
+    { path: '/admin-layout/reportes', title: 'Reportes', icon: 'nc-book-bookmark', class: '' },
 ];
 
 @Component({

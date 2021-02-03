@@ -6,34 +6,27 @@
         </div>
         <div class="card-body"> 
             <form #bicicletaForm="ngForm" (ngSubmit)="onSubmit(bicicletaForm)">
-
-
                 <div class="form-group">
                     <label for="estado">Ingrese el estado</label><br>
-                    <select class="form-select form-select-sm" name="estado" id="estacion" [(ngModel)]="bicicleta.estado">
+                    <select class="custom-select col-5" name="estado" id="estacion" [(ngModel)]="bicicleta.estado">
                         <option value="Disponible">Disponible</option>
-                        <option value="No disponible">No Disponible</option>
+                        <option value="No Disponible">No Disponible</option>
                         <option value="Defectuosa">Defectuosa</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="estacion">Ingrese la estacion</label><br>
-                    <select class="form-select form-select-sm" name="estacion" id="estacion" [(ngModel)]="bicicleta.estacion">
+                    <select class="custom-select col-5" name="estacion" id="estacion" [(ngModel)]="bicicleta.estacion">
                         <option value="1">Garita</option>
                         <option value="2">Rectorado</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">
                         Agregar Bicicleta
                     </button>
                 </div>
             </form>
-
         </div>
-
     </div>
-
 </div>

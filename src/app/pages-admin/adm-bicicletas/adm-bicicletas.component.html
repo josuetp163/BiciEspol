@@ -48,12 +48,12 @@
         <form>
           <div class="form-group">
             <label for="codigo">Codigo</label>
-            <input readonly="true" type="text" class="form-control" name="codigo" [(ngModel)]="bicicleta.id">
+            <input readonly="true" type="text" class="form-control" name="codigo" [(ngModel)]="bicicleta.idBicicleta">
           </div>
 
           <div class="form-group">
             <label for="estado">Estado</label><br>
-            <select class="form-select form-select-sm" name="estado" id="estacion" [(ngModel)]="bicicleta.estado">
+            <select class="custom-select" name="estado" id="estacion" [(ngModel)]="bicicleta.estado">
               <option value="Disponible">Disponible</option>
               <option value="No disponible">No Disponible</option>
               <option value="Defectuosa">Defectuosa</option>
@@ -62,7 +62,7 @@
 
           <div class="form-group">
             <label for="estacion">Ingrese la estacion</label><br>
-            <select class="form-select form-select-sm" name="estacion" id="estacion" [(ngModel)]="bicicleta.estacion">
+            <select class="custom-select" name="estacion" id="estacion" [(ngModel)]="bicicleta.estacion">
               <option value="1">Garita</option>
               <option value="2">Rectorado</option>
             </select>

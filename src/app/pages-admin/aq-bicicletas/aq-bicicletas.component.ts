@@ -6,6 +6,7 @@ import { Bicicleta } from '../../models/bicicleta';
 import { ToastrService } from "ngx-toastr";
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Puente } from '../../models/puente';
 
 @Component({
   selector: 'app-aq-bicicletas',
@@ -21,12 +22,12 @@ export class AqBicicletasComponent implements OnInit{
 
   constructor(
     public FirebaseService: FirebaseService,
-    private toastr: ToastrService,
+    private ToastrService: ToastrService,
     private http: HttpClient
     ){}
 
   showNotification(){
-    this.toastr.success(
+    this.ToastrService.success(
       '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Bicicleta Agregada Correctamente</span>',
       "",
       {
@@ -35,6 +36,21 @@ export class AqBicicletasComponent implements OnInit{
         enableHtml: true,
         toastClass: "alert alert-success alert-with-icon",
         positionClass: "toast-top-right"
+      }
+    );
+  }
+
+  
+  showNotificationErr(){
+    this.ToastrService.error(
+      '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Error al añadir la bicicleta</span>',
+      "",
+      {
+        timeOut: 4000,
+        closeButton: true,
+        enableHtml: true,
+        toastClass: "alert alert-danger alert-with-icon",
+        positionClass: "toast-top-center"
       }
     );
   }
@@ -52,12 +68,14 @@ export class AqBicicletasComponent implements OnInit{
   }
 
   onSubmit(bicicletaForm: NgForm){
-    this.http.post("http://localhost:3000/bicicletas/ingresarBicicleta",this.bicicleta).subscribe(
+    this.http.post(Puente.url + "/bicicletas/ingresarBicicleta",this.bicicleta).subscribe(
       data => {
+        console.log(data)
         this.showNotification();
       },
       err => {
         console.log(err)
+        this.showNotificationErr();
       }
     )
     /*

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FirebaseService} from '../../services/firebase.service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Puente } from '../../models/puente';
 @Component({
   selector: 'app-servicio',
   templateUrl: './servicio.component.html',
@@ -31,7 +32,7 @@ export class ServicioComponent implements OnInit {
         }
       })
     });*/
-    this.http.get<any[]>("http://localhost:3000/bicicletas/leerBicicleta")
+    this.http.get<any[]>( Puente.url + "/bicicletas/leerBicicleta")
     .subscribe(item =>{
       this.bicicletas = [];
       item.forEach(element =>{

@@ -1,5 +1,5 @@
 export class Bicicleta {
-    id: number
+    idBicicleta: number
     estacion: string;
     estado: string;
 }
