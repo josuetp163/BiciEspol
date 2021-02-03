@@ -6,6 +6,7 @@ import { AdmBicicletasComponent }      from '../../pages-admin/adm-bicicletas/ad
 import { ServicioComponent }           from '../../pages-admin/servicio/servicio.component';
 import { AdmForoComponent }            from '../../pages-admin/adm-foro/adm-foro.component';
 import { ReportesComponent } from '../../pages-admin/reportes/reportes.component';
+import { AdmEstadisticaComponent}      from "../../pages-admin/adm-estadistica/adm-estadistica.component";
 
 
 
@@ -16,4 +17,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'servicio',       component: ServicioComponent },
     { path: 'adm-foro',       component: AdmForoComponent },
     { path: 'reportes',       component: ReportesComponent },
+    { path: 'adm-estadistica',component: AdmEstadisticaComponent }
 ];

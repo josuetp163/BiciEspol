@@ -6,7 +6,6 @@ import { DataTablesModule } from "angular-datatables";
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
-
 import { InicioAdminComponent }        from '../../pages-admin/inicio-admin/inicio-admin.component';
 import { AqBicicletasComponent }          from '../../pages-admin/aq-bicicletas/aq-bicicletas.component';
 import { AdmBicicletasComponent }               from '../../pages-admin/adm-bicicletas/adm-bicicletas.component';
@@ -16,6 +15,7 @@ import { ReportesComponent } from '../../pages-admin/reportes/reportes.component
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AdmEstadisticaComponent } from 'app/pages-admin/adm-estadistica/adm-estadistica.component';
 
 @NgModule({
   imports: [
@@ -32,6 +32,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ServicioComponent,
     AdmForoComponent,
     ReportesComponent,
+    AdmEstadisticaComponent,
+    
+
   ]
 })
 

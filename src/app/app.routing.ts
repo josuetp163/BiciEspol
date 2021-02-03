@@ -33,6 +33,7 @@ export const AppRoutes: Routes = [
       path: '',
       loadChildren: './layouts/login-layout/login-layout.module#LoginLayoutModule'
   }]},
+
   {
     path: '**',
     redirectTo: 'dashboard'
