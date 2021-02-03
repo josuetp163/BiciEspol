@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Puente } from '../../models/puente';
 import  * as d3 from "d3";
 import {datos} from "./datos";
+
 @Component({
   selector: 'app-adm-estadistica',
   templateUrl: './adm-estadistica.component.html',
@@ -34,8 +36,8 @@ export class AdmEstadisticaComponent implements OnInit {
 
   private svg;
   private margin = 10;
-  private width = 200;
-  private height = 200;
+  private width = 300;
+  private height = 300;
   // The radius of the pie chart is half the smallest side
   private radius = Math.min(this.width, this.height) / 2 - this.margin;
   private colors;
@@ -43,19 +45,19 @@ export class AdmEstadisticaComponent implements OnInit {
  
 private svgBar;
 private marginBar = 50;
-private widthBar = 300 - (this.marginBar * 2);
-private heightBar = 200 - (this.marginBar * 2);
+private widthBar = 400 - (this.marginBar * 2);
+private heightBar = 300 - (this.marginBar * 2);
 
 private svgHor;
 private marginHor = 50;
-private widthHor = 300 - (this.marginHor * 2);
-private heightHor = 200 - (this.marginHor * 2);
+private widthHor = 400 - (this.marginHor * 2);
+private heightHor = 300 - (this.marginHor * 2);
 
 
 public  fetchData(){
   let datos=[];
 
-   fetch('http://localhost:3000/bicicletas/leerBicicleta')
+   fetch(Puente.url + '/bicicletas/leerBicicleta')
   .then((resultado)=>{
       return resultado.json();
     })
@@ -63,7 +65,7 @@ public  fetchData(){
       let cantidadDisp=0;
       let rotas=0;
         for(let bici of json){
-          if(bici.estado=='rota'){
+          if(bici.estado=='Defectuosa'){
              rotas++;
               
           }else{
@@ -73,7 +75,7 @@ public  fetchData(){
 
         datos=[
           {"Estado":"Disponible", "Cantidad":cantidadDisp},
-          {"Estado":"Rotas", "Cantidad":rotas},
+          {"Estado":"Defectuosa", "Cantidad":rotas},
           ]
 
           //create svg
@@ -135,7 +137,7 @@ public  fetchData(){
   public  fetchDataBar(){
     let datos=[];
   
-     fetch('http://localhost:3000/bicicletas/leerBicicleta')
+     fetch(Puente.url + '/bicicletas/leerBicicleta')
     .then((resultado)=>{
         return resultado.json();
       })
@@ -210,7 +212,7 @@ public  fetchData(){
       let datos=[];
       
       console.log("fetcha dataHor")
-       fetch('http://localhost:3000/alquileres/leerAlquileres')
+       fetch(Puente.url + '/mongo/showReportes')
       .then((resultado)=>{
           return resultado.json();
         })
@@ -220,14 +222,14 @@ public  fetchData(){
           let  mapBicicletas=new Map();
           let arrBicis=[]
             for(let bici of json){
-              if(arrBicis.includes(bici.bicicleta)){
-                console.log("ya tiene: "+bici.bicicleta)
-                 mapBicicletas.set(bici.bicicleta,mapBicicletas.get(bici.bicicleta)+1)
+              if(arrBicis.includes(bici.codigoBici)){
+                console.log("ya tiene: "+bici.codigoBici)
+                 mapBicicletas.set(bici.codigoBici,mapBicicletas.get(bici.codigoBici)+1)
                   
               }else{
-                arrBicis.push(bici.bicicleta)
-                console.log("añadir: "+bici.bicicleta);
-                  mapBicicletas.set(bici.bicicleta,1);
+                arrBicis.push(bici.codigoBici)
+                console.log("añadir: "+bici.codigoBici);
+                  mapBicicletas.set(bici.codigoBici,1);
               }
             }
     
@@ -279,21 +281,10 @@ public  fetchData(){
    .attr("width", x.bandwidth())
    .attr("height", (d) => this.heightHor - y(d.Cantidad))
    .attr("fill", "#d04a35");
-              
-    
- 
         }).catch()
          
     
       }
-
-
-
-
-
-
-
-
 }
 
 

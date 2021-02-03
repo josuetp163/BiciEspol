@@ -15,7 +15,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/admin-layout/servicio', title: 'Fuera de servicio', icon: 'nc-settings', class: '' },
     { path: '/admin-layout/adm-foro', title: 'Administrar Foro de Informacion', icon: 'nc-paper', class: '' },
     { path: '/admin-layout/reportes', title: 'Reportes', icon: 'nc-book-bookmark', class: '' },
-    { path: '/admin-layout/adm-estadistica', title: 'Estadísticas', icon: 'nc-paper', class: '' }
+    { path: '/admin-layout/adm-estadistica', title: 'Estadísticas', icon: 'nc-chart-pie-36', class: '' }
 ];
 
 @Component({
