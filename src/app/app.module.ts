@@ -9,7 +9,7 @@ import {environment} from '../environments/environment';
 import { ToastrModule } from "ngx-toastr";
 
 
-
+import { HttpClientModule } from '@angular/common/http';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { SidebarAdminModule } from './sidebar-admin/sidebar-admin.module';
 import { FooterModule } from './shared/footer/footer.module';
@@ -24,16 +24,16 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     ClientLayoutComponent,
-    LoginLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),

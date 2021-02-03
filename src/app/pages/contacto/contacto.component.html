@@ -1,0 +1,56 @@
+<div class="input-group">
+    <div class="col-1"></div>
+    <div class="card col-10">
+        <div class="card-header">
+            <h5 class="card-title">Envio de Correo Electronico</h5>
+        </div>
+        <div class="card-body"> 
+            <form #bicicletaForm="ngForm" (ngSubmit)="onSubmit(bicicletaForm)">
+                
+
+                <div class="form-group">
+                    <label for="nombre">Ingrese el nombre</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="nombre"
+                        #estado="ngModel"
+                        [(ngModel)]="mail.nombre"
+                        placeholder="Nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Ingrese el email</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="email"
+                        #codigo="ngModel"
+                        [(ngModel)]="mail.email"
+                        placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Ingrese el Mensaje</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="mensaje"
+                        #estacion="ngModel" 
+                        [(ngModel)]="mail.mensaje"
+                        placeholder="Mensaje">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+</div>

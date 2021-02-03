@@ -5,12 +5,15 @@ import { DisponiblesComponent }     from '../../pages/disponibles/disponibles.co
 import { PrestamoComponent }        from '../../pages/prestamo/prestamo.component';
 import { ReporteComponent }         from '../../pages/reporte/reporte.component';
 import { ForoComponent }            from '../../pages/foro/foro.component';
+import { ContactoComponent }        from '../../pages/contacto/contacto.component';
 
 
 export const ClientLayoutRoutes: Routes = [
-    { path: 'inicio',   component: InicioComponent },
+    { path: 'inicio',         component: InicioComponent },
     { path: 'disponibles',    component: DisponiblesComponent },
     { path: 'prestamo',       component: PrestamoComponent },
     { path: 'reporte',        component: ReporteComponent },
     { path: 'foro',           component: ForoComponent },
+    { path: 'contacto',       component: ContactoComponent },
+
 ];

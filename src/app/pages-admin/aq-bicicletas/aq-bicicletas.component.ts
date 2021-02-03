@@ -4,23 +4,30 @@ import { FirebaseService} from '../../services/firebase.service';
 import { NgForm } from '@angular/forms';
 import { Bicicleta } from '../../models/bicicleta';
 import { ToastrService } from "ngx-toastr";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Puente } from '../../models/puente';
 
 @Component({
   selector: 'app-aq-bicicletas',
   templateUrl: './aq-bicicletas.component.html',
   styleUrls: ['./aq-bicicletas.component.css']
 })
+@Injectable({
+  providedIn: 'root'
+})
 export class AqBicicletasComponent implements OnInit{
   
-  bicicletas: any[];
+  bicicleta = new Bicicleta();
 
   constructor(
     public FirebaseService: FirebaseService,
-    private toastr: ToastrService
+    private ToastrService: ToastrService,
+    private http: HttpClient
     ){}
 
   showNotification(){
-    this.toastr.success(
+    this.ToastrService.success(
       '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Bicicleta Agregada Correctamente</span>',
       "",
       {
@@ -33,8 +40,23 @@ export class AqBicicletasComponent implements OnInit{
     );
   }
 
+  
+  showNotificationErr(){
+    this.ToastrService.error(
+      '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Error al añadir la bicicleta</span>',
+      "",
+      {
+        timeOut: 4000,
+        closeButton: true,
+        enableHtml: true,
+        toastClass: "alert alert-danger alert-with-icon",
+        positionClass: "toast-top-center"
+      }
+    );
+  }
+
   ngOnInit(){
-    this.FirebaseService.getBicicletas().snapshotChanges()
+    /*this.FirebaseService.getBicicletas().snapshotChanges()
     .subscribe(item =>{
       this.bicicletas = [];
       item.forEach(element =>{
@@ -42,18 +64,30 @@ export class AqBicicletasComponent implements OnInit{
         info["$key"] = element.key;
         this.bicicletas.push(info);
       })
-    });
+    });*/
   }
 
   onSubmit(bicicletaForm: NgForm){
+    this.http.post(Puente.url + "/bicicletas/ingresarBicicleta",this.bicicleta).subscribe(
+      data => {
+        console.log(data)
+        this.showNotification();
+      },
+      err => {
+        console.log(err)
+        this.showNotificationErr();
+      }
+    )
+    /*
     this.FirebaseService.insertBicicleta(bicicletaForm.value);
     this.resetForm(bicicletaForm);
-    this.showNotification();
+    this.showNotification();*/
   }
+  /*
   resetForm(bicicletaForm: NgForm){
     if(bicicletaForm != null){
       bicicletaForm.reset();
       this.FirebaseService.selectedBicicleta = new Bicicleta();
     }
-  }
+  }*/
 }

@@ -21,12 +21,12 @@ let ancla;
 function comprobar() {
   reporte= document.getElementsByClassName("reporte").item(0);
   ancla=document.querySelector("li.reporte a");
-  console.log(ancla)
-  ancla.addEventListener("click",startup,false);
+  //console.log(ancla)
+  //ancla.addEventListener("click",startup,false);
   
-  if(reporte.classList.contains("active")){
-    startup();
-  }
+  //if(reporte.classList.contains("active")){
+  //  startup();
+  //}
 }
 
 
@@ -131,11 +131,11 @@ function takepicture() {
 }
 
 function stop(){
-  if(!reporte.classList.contains("active")){
-    console.log("no")
-    streaming=false;
-    video.srcObject.getTracks()[0].stop()
-  }
+  //if(!reporte.classList.contains("active")){
+  //  console.log("no")
+  //  streaming=false;
+  //  video.srcObject.getTracks()[0].stop()
+  //}
 }
 
 //document.querySelector()

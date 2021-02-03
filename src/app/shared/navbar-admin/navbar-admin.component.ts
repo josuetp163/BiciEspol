@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/co
 import { ROUTES } from '../../sidebar-admin/sidebar-admin.component';
 import { Router } from '@angular/router';
 import { Location} from '@angular/common';
+import { AngularFireAuth } from '@angular/fire/auth'
 
 @Component({
     moduleId: module.id,
@@ -19,7 +20,13 @@ export class NavbarComponent implements OnInit{
     public isCollapsed = true;
     @ViewChild("navbar-admin-cmp", {static: false}) button;
 
-    constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router) {
+    constructor(
+      location:Location, 
+      private renderer : Renderer2, 
+      private element : ElementRef, 
+      private router: Router, 
+      private AngularFireAuth: AngularFireAuth)
+       {
         this.location = location;
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
@@ -92,4 +99,11 @@ export class NavbarComponent implements OnInit{
 
       }
 
+      logout(){
+        return new Promise((resolve,reject)=>{
+          this.AngularFireAuth.signOut()
+          .then(user => resolve(user),
+          err => reject(err))
+        });
+      }
 }
