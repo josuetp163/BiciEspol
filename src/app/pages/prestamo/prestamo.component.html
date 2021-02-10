@@ -9,12 +9,14 @@
                     </div>
                 </div>
             </div>
-            <img class="card-img-bottom" src="assets/img/codigoQR.jpg" alt="Card s cap" />
+            <zxing-scanner *ngIf="scannerEnabled" #scanner (scanSuccess)="scanSuccessHandler($event)">
+            </zxing-scanner>
+            <button (click)="enableScanner()" *ngIf="!scannerEnabled" type="button" class="btn btn-success">INTENTAR DE NUEVO</button>
         </div>
         <div class="card text-center">
             <div class="card-body">
                 <h4 class="card-title">Hora de Préstamo</h4>
-                <p class="card-text">02/12/2020 - 16:00</p><br>
+                <p class="card-text">{{date}}</p><br>
             </div>
         </div>
         <div class="card text-center">

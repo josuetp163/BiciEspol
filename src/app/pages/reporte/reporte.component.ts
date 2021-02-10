@@ -10,35 +10,22 @@ export class ReporteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    startup();
   }
 
 }
-let reporte;
-let ancla;
-
 
 //Videocamara
-function comprobar() {
-  reporte= document.getElementsByClassName("reporte").item(0);
-  ancla=document.querySelector("li.reporte a");
-  //console.log(ancla)
-  //ancla.addEventListener("click",startup,false);
-  
-  //if(reporte.classList.contains("active")){
-  //  startup();
-  //}
-}
-
 
 var width = 425;    
 var height = 0;     
-
 var streaming = false;
 var video = null;
 var canvas = null;
 var photo = null;
 var startbutton = null;
 var cancel_button= null;
+var buttonTomar=true;
 
 function startup() {
   console.log("clic")
@@ -110,12 +97,6 @@ function clearphoto() {
   photo.setAttribute('src', data);
 }
 
-// Capture a photo by fetching the current contents of the video
-// and drawing it into a canvas, then converting that to a PNG
-// format data URL. By drawing it on an offscreen canvas and then
-// drawing that to the screen, we can change its size and/or apply
-// other changes before drawing it.
-
 function takepicture() {
   var context = canvas.getContext('2d');
   if (width && height) {
@@ -129,16 +110,6 @@ function takepicture() {
     clearphoto();
   }
 }
-
-function stop(){
-  //if(!reporte.classList.contains("active")){
-  //  console.log("no")
-  //  streaming=false;
-  //  video.srcObject.getTracks()[0].stop()
-  //}
-}
-
-//document.querySelector()
 
 function non_visible(){
   let cont_video=document.getElementById("video")
@@ -167,16 +138,6 @@ function visible(){
   let boton_tomar= document.getElementById("pick_button");
   boton_tomar.setAttribute("class","visibles")
 }
-
-
-
-
-
-
-window.addEventListener("load",comprobar ,true);
-window.addEventListener("click",stop);
-
-
 
 
 

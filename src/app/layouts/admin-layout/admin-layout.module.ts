@@ -17,6 +17,7 @@ import { ReportesComponent } from '../../pages-admin/reportes/reportes.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AdmEstadisticaComponent } from 'app/pages-admin/adm-estadistica/adm-estadistica.component';
 
+
 @NgModule({
   imports: [
     CommonModule,

@@ -24,6 +24,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

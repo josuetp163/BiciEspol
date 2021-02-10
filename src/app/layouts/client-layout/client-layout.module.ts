@@ -11,6 +11,8 @@ import { PrestamoComponent }        from '../../pages/prestamo/prestamo.componen
 import { ReporteComponent }         from '../../pages/reporte/reporte.component';
 import { ForoComponent }            from '../../pages/foro/foro.component';
 import { ContactoComponent }            from '../../pages/contacto/contacto.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     RouterModule.forChild(ClientLayoutRoutes),
     FormsModule,
-    NgbModule
+    NgbModule,
+    ZXingScannerModule
   ],
   declarations: [
     InicioComponent,
