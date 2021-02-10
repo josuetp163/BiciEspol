@@ -1,3 +1,3 @@
 export const Puente = {
-    url: "http://6c68eabbb26d.ngrok.io"
+    url: "http://b63f3525ac9d.ngrok.io"
 }

@@ -68,6 +68,11 @@
             </select>
           </div>
 
+          <div class="text-center form-group">
+            <label for="">Codigo QR</label><br>
+            <ngx-qrcode [elementType]="elementType" [value]="value" cssClass="img-thumbnail text-center" errorCorrectionLevel="L">
+            </ngx-qrcode>
+          </div>
           <div class="form-group">
             <button (click)="actualizarBicicleta()" class="btn btn-primary" type="submit">
               Editar información

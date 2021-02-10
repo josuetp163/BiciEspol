@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataTablesModule } from "angular-datatables";
 
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
 import { InicioAdminComponent }        from '../../pages-admin/inicio-admin/inicio-admin.component';
@@ -24,7 +25,8 @@ import { AdmEstadisticaComponent } from 'app/pages-admin/adm-estadistica/adm-est
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     NgbModule,
-    DataTablesModule
+    DataTablesModule,
+    NgxQRCodeModule
   ],
   declarations: [
     InicioAdminComponent,

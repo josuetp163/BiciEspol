@@ -18,6 +18,9 @@ export class AdmBicicletasComponent implements OnInit {
 
   bicicletas: any[];
   bicicleta = new Bicicleta();
+  title = 'app';
+  elementType = 'url';
+  value = this.bicicleta.idBicicleta;
 
   constructor(
     public FirebaseService: FirebaseService,
